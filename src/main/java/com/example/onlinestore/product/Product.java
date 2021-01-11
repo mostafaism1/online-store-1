@@ -1,4 +1,4 @@
-package com.example.onlinestore.model;
+package com.example.onlinestore.product;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -9,11 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.awt.*;
 
 @Data
 @RequiredArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class Product {
     @Id
