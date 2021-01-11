@@ -18,7 +18,7 @@ import java.awt.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
+    private int id;
     private String name;
     private String description;
 }
