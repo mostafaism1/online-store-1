@@ -31,14 +31,14 @@ public class User implements UserDetails {
     private String password;
     private String name;
     @Email
-    private String email;        
+    private String email;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("USER"));
     }
 
-    
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
