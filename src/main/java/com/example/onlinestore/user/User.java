@@ -3,7 +3,6 @@ package com.example.onlinestore.user;
 import java.util.Arrays;
 import java.util.Collection;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,13 +24,10 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @Column(name = "user_name")
-    private String userName;
-    private String password;
-    private String name;
     @Email
     private String email;
+    private String password;
+    private String name;    
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -61,6 +57,6 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return email;
     }
 }
