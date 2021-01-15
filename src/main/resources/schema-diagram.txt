@@ -1,0 +1,50 @@
+@startuml
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "user" as e01 {
+  *id : int
+  --
+  *email_address : varchar(50)
+  *password : varchar(50)
+  *name : varchar(50)
+}
+
+entity "address" as e02 {
+  *id : int
+  --
+  *user_id : int
+  *address : varchar(250)
+}
+
+entity "product" as e03 {
+  *id : int
+  --
+  *name : varchar(20)
+  *description : varchar(100)
+}
+
+entity "order" as e04 {
+  *id : int
+  --
+  *user_id : int
+  *created_at : Timestamp
+}
+
+entity "order_product" as e05 {
+  *id : int
+  --
+  *order_id : int
+  *product_id : int
+  *quantity : int
+}
+
+
+e01 }|-- e02
+e04 }|-- e05
+e05 ||-- e03
+e04 ||-- e01
+@enduml
