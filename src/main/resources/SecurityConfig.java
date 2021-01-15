@@ -9,10 +9,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    UserDetailsService userDetailsSerive;
+    private final UserDetailsService userDetailsSerive;
 
     @Bean 
     public PasswordEncoderr encoder() { 
