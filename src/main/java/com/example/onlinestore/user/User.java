@@ -1,4 +1,4 @@
-package com.example.onlinestore.user;
+package com.example.onlinestore.users;
 
 import java.util.Arrays;
 import java.util.Collection;
