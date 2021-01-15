@@ -1,7 +1,7 @@
-package com.example.onlinestore.user;
+package com.example.onlinestore.users;
 
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,11 +27,11 @@ public class User implements UserDetails {
     @Email
     private String email;
     private String password;
-    private String name;    
+    private String name;  
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority("USER"));
+        return Collections.singletonList(new SimpleGrantedAuthority("USER"));
     }
 
 
