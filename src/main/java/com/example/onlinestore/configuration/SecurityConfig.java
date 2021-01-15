@@ -1,6 +1,5 @@
-import com.example.onlinestore.user.UserRepositoryUserDetailsService;
+package com.example.onlinestore.configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
