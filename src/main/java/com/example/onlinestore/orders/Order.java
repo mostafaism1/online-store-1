@@ -26,16 +26,16 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+    private long id;
 
     @Temporal(TemporalType.DATE)
-    Date placedAt;
+    private Date placedAt;
 
     @ManyToOne(targetEntity = User.class)
-    User user;
+    private User user;
 
     @ManyToMany(targetEntity = ProductQuantity.class)
     @Size(min = 1)
-    List<ProductQuantity> productQuantities;
+    private List<ProductQuantity> productQuantities;
 
 }
