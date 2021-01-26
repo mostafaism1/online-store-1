@@ -17,16 +17,16 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+    private long id;
 
-    int rating;
+    private int rating;
 
-    String comment;
+    private String comment;
 
     @ManyToOne(targetEntity = Product.class)
-    Product product;
+    private Product product;
 
     @ManyToOne(targetEntity = User.class)
-    User user;
+    private User user;
 
 }
