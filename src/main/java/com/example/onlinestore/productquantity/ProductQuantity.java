@@ -16,12 +16,12 @@ public class ProductQuantity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+    private long id;
 
     @ManyToOne(targetEntity = Product.class)
-    Product product;
+    private Product product;
 
-    double price;
+    private double price;
 
-    int quantity;
+    private int quantity;
 }
