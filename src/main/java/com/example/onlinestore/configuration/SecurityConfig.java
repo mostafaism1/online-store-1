@@ -36,7 +36,8 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/**")
                 .permitAll()
                 .and()
-                .csrf().disable();;
+                .csrf().disable()
+                .headers().frameOptions().sameOrigin();
     }
 
 }
