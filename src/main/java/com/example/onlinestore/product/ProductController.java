@@ -2,6 +2,7 @@ package com.example.onlinestore.product;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,11 @@ public class ProductController {
         List<Product> products = productRepo.findAll();
         return products;
     }
+
+    @GetMapping("/{id}")
+    public Product getProduct(@PathVariable("id") Integer id) {
+        return productRepo.findById(id).get();
+    }
+
 
 }
